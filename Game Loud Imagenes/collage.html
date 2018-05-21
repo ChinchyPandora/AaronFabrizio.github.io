@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <title>game loud</title>
+<head>
+         <P ALIGN="LEFT"><IMG SRC="2.png"/></P>
+        <HR noshade size="15" color="blue"> </HR>
+            <style type="text/css"> 
+            *{
+                padding:0px;
+                margin: 0px;
+             }
+            #header {
+                margin: auto;
+                width:500px;
+                font-family:arial;
+            }
+            ul, ol{
+                list-style:none;
+            }
+            .nav li a{
+                background-color: blue;
+                    color:black;
+                    text-decoration:none;
+                padding:10px 15px;
+                display:block;
+            }
+            .nav li a:hover {
+                background-color:434343;
+            }
+            .nav > li {
+                float: left;
+            }
+            .nav li ul {
+                display:none;
+                position: absolute;
+                min-width:140px;
+            }
+            .nav li:hover > ul {
+                display: block;
+            }
+        </style> 
+            
+   <style> 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+</style> 
+    </head>
+<BODY BGCOLOR="BLACK">
+                <div id="header">
+            <ul class="nav">
+            <li><a href="menu.html">inicio</a></li>
+            <li><a href="">noticias</a>
+                <ul>
+                    <li><a href="Recuadro.html">videojuegos</a></li>
+                    <li><a href="Anime.html">anime</a></li>
+                </ul>
+            </li>   
+            <li><a href="lanzamientos.html">lanzamientos</a></li>
+            <li><a href="">comunidad</a>
+                <ul>
+                    <li><a href="collage.html">fan arts</a></li>
+                    <li><a href="fangames.html">fan games</a></li>
+                </ul>
+            </li>     
+            </ul>
+    </div>
+            
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Collage</h1>
+    <h1><p><FONT COLOR="YELLOW">Galeria de fan arts</FONT></p></h1>
+    <h2><p><FONT COLOR="YELLOW">Todo el contenido de esta seccion pertenece a los usuarios de devianart, apoya sus proyectos en la pagina oficial:</FONT></p></h2>
+    <font color="yellow"><a href="https://www.deviantart.com/"><font color="RED">https://www.deviantart.com/</font></a>
+    <HR noshade size="35" color="black"> </HR>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">3</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="Antman.jpg" style="width:100%">
+    <img src="Evangelion.jpg" style="width:100%">
+    <img src="Goku.jpg" style="width:100%">
+    <img src="kiki.jpg" style="width:100%">
+    <img src="Lisa.jpg" style="width:100%">
+    <img src="Sam.jpg" style="width:100%">
+    <img src="Teen Titans.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Caveira.png" style="width:100%">
+    <img src="Fallout.jpg" style="width:100%">
+    <img src="IQ.jpg" style="width:100%">
+    <img src="\Knight.jpg" style="width:100%">
+    <img src="Lupin.jpg" style="width:100%">
+    <img src="Samus.gif" style="width:100%">
+	<img src="thanos.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="computer.jpg" style="width:100%">
+    <img src="giants.jpg" style="width:100%">
+    <img src="John.jpg" style="width:100%">
+    <img src="lanister.jpg" style="width:100%">
+    <img src="Motorcycle.jpg" style="width:100%">
+    <img src="Sasha.gif" style="width:100%">
+    <img src="Tsuyu.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Ela.gif" style="width:100%">
+    <img src="Godzilla.gif" style="width:100%">
+    <img src="Jyn.jpg" style="width:100%">
+    <img src="Link.jpg" style="width:100%">
+    <img src="Princess.jpg" style="width:100%">
+    <img src="Stanley.jpg" style="width:100%">
+	<img src="Zelda.gif" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "100%";  // IE10
+        elements[i].style.flex = "100%";
+    }
+}
+
+// Two images side by side
+function two() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "50%";  // IE10
+        elements[i].style.flex = "50%";
+    }
+}
+
+// Four images side by side
+function four() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "25%";  // IE10
+        elements[i].style.flex = "25%";
+    }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
